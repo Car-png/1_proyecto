@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none; 
+}
+
+@font-face
+{
+    font-family: 'JCardenas';
+    src: url(Surfing\ Capital.ttf);
+}
+
+body{
+    background: url('yYroAZX.png') no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container::before{
+    content: '';
+    background: linear-gradient(rgba(255, 0, 0, 0.445),rgba(0, 0, 255, 0.24));
+    position: absolute;
+    top: -80px;
+    left: -0px;
+    right: -0px;
+    height: 104vh;
+}
+
+h2{
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    font-family: 'JCardenas';
+    color: #151515;
+    letter-spacing: 6px;
+    animation: animate 0.5s linear infinite;
+    pointer-events: none;
+    font-size: 18px;
+}
+
+@keyframes animate
+{
+    0%, 100%
+    {
+        text-shadow: -1.5px -1.5px 0 #0ff, 1.5px 1.5px 0 #f00;
+    }
+
+    25%
+    {
+        text-shadow: 1.5px 1.5px 0 #0ff, -1.5px -1.5px 0 #f00;
+    }
+
+    50%
+    {
+        text-shadow: 1.5px -1.5px 0 #0ff, -1.5px 1.5px 0 #f00;
+    }
+
+    75%
+    {
+        text-shadow: -1.5px 1.5px 0 #0ff, 1.5px -1.5px 0 #f00;
+    }
+}
+
+
+.container{
+    position: relative;
+    top: 14%;
+    transform: translateY(-50px);
+    width: 100%;
+    padding: 0 20px;
+}
+
+
+.formulario{
+    display: flex;
+    max-width: 550px;
+    background-color: rgba(0, 0, 0, 0.342);
+    padding: 30px;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 15, 15, 0.808);
+    position: relative;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 255, 0.349));
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+.formulario:hover{
+    box-shadow: 0 5px 15px rgba(0, 255, 178, .5),
+                0 5px 15px rgba(0, 255, 178, .5),
+                0 5px 15px rgba(0, 255, 178, .5);
+    transition: 0.5s ease;
+}
+
+.formulario::after{
+    content: '';
+    position: absolute;
+    
+}
+
+.formulario::before{
+    content: '';
+    position: absolute;
+    top: -0px;
+    left: -0px;
+    bottom: -0px;
+    right: -0px;    
+    background: linear-gradient(rgba(117, 2, 2, 0.205),rgba(0, 0, 255, 0.205));
+    
+}
+
+.input-fields{
+    display: flex;
+    flex-direction: column;
+    margin-right: 4%;
+}
+
+.input-fields,
+.msg{
+    width: 48%;
+    position: relative;
+}
+
+.input-fields .input,
+.msg textarea{
+    margin: 10px;
+    background: transparent;
+    border: 0px;
+    color: #c5ecfd;
+    border-bottom: 2px solid #151515;
+    font-family: 'JM';
+    padding: 10px;
+    width: 100%;
+    resize: none;
+    font-size: 28px;
+}
+
+.input-fields .input:hover{
+    margin: 10px;
+    background: transparent;
+    border: 0px;
+    color: #c5ecfd;
+    border-bottom: 2px solid #c5ecfd;
+    padding: 10px;
+    width: 100%;
+    resize: none;
+    transition: 0.8s ease;
+}
+
+.input:focus{
+    border-bottom: 2px solid #c5ecfd;
+}
+
+.input::placeholder{
+    color: rgb(0, 15, 15);
+    letter-spacing: 2px;
+}
+
+.input-fields .input{
+    color: #c5ecfd;
+}
+
+.msg textarea{
+    height: 170px;
+}
+
+a{
+    position: relative;
+    padding: 15px;
+    text-decoration: none;
+    width: 200px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.right{
+    width: 200px;
+    margin-top: 10px;
+    position: absolute;
+    margin-left: 25px;
+    overflow: hidden;
+}
+
+@font-face{
+    font-family: 'JM';
+    src: url(vtks\ Rascunho\ \ Errado.ttf);
+}
+
+a .btn{
+    position: relative;
+    z-index: 1;
+    color: rgba(204, 199, 199, 0.835);
+    font-size: 20px;
+    letter-spacing: 8px;
+    font-family: 'JM';
+    padding: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+a .Liquido{
+    background: rgba(0, 255, 179, 0.233);
+    width: 200px;
+    height: 200px;
+    left: 0;
+    top: -80px;
+    position: absolute;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: all 0.5s ease;
+}
+
+a:hover .Liquido{
+    top: -120px;
+}
+
+a .Liquido::before,
+a .Liquido::after{
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+a .Liquido::before{
+    border-radius: 40%;
+    background: rgba(20, 20, 20, 0.424);
+    animation: liquido 5s linear infinite;
+}
+
+a .Liquido::after{
+    border-radius: 40%;
+    background: rgba(20, 20, 20, 0.342);
+    animation: liquido 10s linear infinite;
+}
+
+a .Liquid{
+    background: rgba(0, 255, 179, 0.233);
+    position: absolute;
+    left: 0;
+    top: -80px;
+    width: 200px;
+    height: 200px;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+    transition: all 0.5s ease;
+}
+
+a:hover .Liquid{
+    top: -120px;
+}
+
+a .Liquid::before,
+a .Liquid::after
+{
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -75%);
+}
+
+a .Liquid::before{
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 0.424);
+    animation: liquido 5s linear infinite;
+}
+
+a .Liquid::after{
+    border-radius: 45%;
+    background: rgba(20, 20, 20, 0.342);
+    animation: liquido 10s linear infinite;
+}
+
+@keyframes liquido{
+    0%{
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+
+
+#rightD{
+    margin-top: 80px;
+    font-family: 'JM';
+    font-size: 20px;
+    letter-spacing: 9px;
+    padding: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 80px;
+    margin-left: 80px;
+    color: rgba(204, 199, 199, 0.835);
+    cursor: pointer;
+    position: absolute;
+}
+#rightD::selection{
+    outline: none;
+    background-color: transparent;
+}
+
+#ready{
+    color: rgba(0, 255, 179, 0.294);
+    font-size: 16px;
+    letter-spacing: 4px;
+    font-family: 'JM';
+    margin-left: 10px;
+    margin-top: 120px;
+    position: absolute;
+}
+
+@media screen and (max-width:600px){
+    .formulario{
+        flex-direction: column;
+        height: 500px;
+    }
+    .msg textarea{
+        height: 60px;
+    }
+    .input-fields,
+    .msg{
+        width: 100%;
+    }
+
+    #rightD{
+        margin-top: 20px;
+        margin-left: 300px;
+    }
+    #ready{
+        margin-top: 50px;
+        margin-left: 230px;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+}

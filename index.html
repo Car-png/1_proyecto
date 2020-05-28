@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Design.css">
+    <link rel="shortcut icon" href="logo.png">
+    <title>Formulario</title>
+</head> 
+<body> 
+    
+    <div class="container">
+
+        <h2>ENCRIPT AND DESCRYPT U MESSAGE</h2>
+
+
+        <div class="formulario">
+        
+            <div class="input-fields">
+
+
+                <input type="text" class="input" id="ingTextoHtml" placeholder="Message secret">
+                <input type="text" class="input" id="keyHtml" placeholder="Number">
+                
+
+                <a href="#">
+                    <span class="btn btnCifrar" id="botonE">Encrypt</span>
+                    <div class="Liquid"></div>
+                </a>
+
+                <a href="#">
+                    <span class="btn btnDescifrar" id="botonD">Decrypt</span>
+                    <div class="Liquid"></div>
+                </a>
+
+            </div>
+
+
+
+            <div class="msg">
+                <textarea id="salTextoHtml">
+
+
+                </textarea>
+                
+                <a class="right" href="#">
+                    <span class="btn" id="botonLimpiar">Clean</span>
+                    <div class="Liquido"></div>
+                </a>
+
+
+                <div id="rightD">Copy</div>
+                
+                <label id="ready"></label>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="Logic.js"></script>
+    <script src="Copy.js"></script>
+
+    </script>
+</body>
+</html>
